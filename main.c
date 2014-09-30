@@ -10,17 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/rabitsorts.h"
+#include "./includes/rabitsorts.h"
 #include <stdio.h>
 
-bool	ORDER;
 
 int		main() {
 
-	ORDER = O_ASC;
-	if (cmp_int(1, 2))
-		printf("cmp 1 & 2 = true");
-	else
-		printf("cmp 1 & 2 = false");
+	opt(0, O_ASC, NULL, 0);
+	printf("sort = %i\n", (int)(opt(0, 0, NULL, 1)));
 	return (false);
 }
