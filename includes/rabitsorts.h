@@ -17,28 +17,34 @@
 **	defines
 */
 
-typedef			unsigned int	boolean;
-# define		bool			boolean
-# define		BOOL			bool
-# define		BOOLEAN			bool
-# define		TRUE			1
-# define		true			TRUE
-# define		FALSE			0
-# define		false			FALSE
+typedef			unsigned int		boolean;
+# define		bool				boolean
+# define		BOOL				bool
+# define		BOOLEAN				bool
+# define		TRUE				1
+# define		true				TRUE
+# define		FALSE				0
+# define		false				FALSE
 
-# define		O_ASC			true
-# define		O_DESC			false
+# define		null				(void *)(0)
+# define		NULL				null
 
-/*
-**	globals
-*/
+# define		O_ASC				true
+# define		O_DESC				false
 
-extern bool 	ORDER;
-extern char 	*ALPHABET_USER;
+typedef struct	s_sortopts {
+	int			sort;
+	bool		order;
+	char		*base;
+}				t_sortopts;
 
 /*
 **	functions
 */
+void			*opt(int sort, bool order, char *base, int getter);
+t_sortopts		*create_opts(int sort, bool order, char *base);
+t_sortopts		*change_opts(void *new_val, int i_opts, t_sortopts *opts);
+void			delopts(t_sortopts *opts);
 
 bool			cmp_c(char c1, char c2);
 bool			cmp_int(int i1, int i2);
