@@ -6,14 +6,12 @@
 /*   By: scombat <scombat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/28 21:19:27 by scombat           #+#    #+#             */
-/*   Updated: 2014/09/28 23:44:50 by scombat          ###   ########.fr       */
+/*   Updated: 2014/09/30 09:38:25 by scombat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RABITSORTS_H
 # define RABITSORTS_H
-# include <stddef.h>
-# include <string.h>
 
 /*
 **	defines
@@ -35,13 +33,14 @@ typedef			unsigned int	boolean;
 **	globals
 */
 
-bool			ORDER =			O_ASC;
-bool 			ALPHABET_USER =	TRUE;
-char			*USER_ALPH = 	null;
+extern bool 	ORDER;
+extern char 	*ALPHABET_USER;
 
 /*
 **	functions
 */
 
+bool			cmp_c(char c1, char c2);
+bool			cmp_int(int i1, int i2);
 
 #endif
