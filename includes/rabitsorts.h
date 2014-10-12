@@ -6,7 +6,7 @@
 /*   By: scombat <scombat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/28 21:19:27 by scombat           #+#    #+#             */
-/*   Updated: 2014/09/30 09:38:25 by scombat          ###   ########.fr       */
+/*   Updated: 2014/10/12 02:40:19 by scombat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,27 @@ typedef struct	s_sortopts {
 /*
 **	functions
 */
-void			*opt(int sort, bool order, char *base, int getter);
+t_sortopts		*get_opt(void);
 t_sortopts		*create_opts(int sort, bool order, char *base);
-t_sortopts		*change_opts(void *new_val, int i_opts, t_sortopts *opts);
+void			set_sort_opt(int sort);
+void			set_order_opt(bool order);
+void			set_base_opt(char *base);
 void			delopts(t_sortopts *opts);
 
 bool			cmp_c(char c1, char c2);
 bool			cmp_int(int i1, int i2);
+
+bool			check_order_int(int *tab);
+bool			check_order_char(char *tab);
+
+int				pos_c_base(char c);
+
+/*
+**	sort functions
+*/
+bool			bubble_int_sort(int *tab);
+bool			bubble_char_sort(char *tab);
+bool			super_bubble_int_sort (int *tab, int n);
+bool			super_bubble_char_sort (char *tab, int n);
 
 #endif
