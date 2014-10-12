@@ -6,7 +6,7 @@
 /*   By: scombat <scombat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/28 21:19:27 by scombat           #+#    #+#             */
-/*   Updated: 2014/10/12 02:40:19 by scombat          ###   ########.fr       */
+/*   Updated: 2014/10/12 03:33:59 by scombat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,8 @@ bool			bubble_int_sort(int *tab);
 bool			bubble_char_sort(char *tab);
 bool			super_bubble_int_sort (int *tab, int n);
 bool			super_bubble_char_sort (char *tab, int n);
+
+bool			quadratic_int_sort(int *tab);
+bool			quadratic_char_sort(char *tab);
 
 #endif
